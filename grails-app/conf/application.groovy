@@ -21,6 +21,12 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 		[pattern: '/**/css/**', filters: 'none'],
 		[pattern: '/**/images/**', filters: 'none'],
 		[pattern: '/**/favicon.ico', filters: 'none'],
-		[pattern: '/**', filters: 'JOINED_FILTERS']
+		//Stateless chain
+		[
+				pattern: '/**',
+				filters: 'JOINED_FILTERS,-anonymousAuthenticationFilter,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter,-rememberMeAuthenticationFilter'
+		],
 ]
 
+
+grails.plugin.springsecurity.rest.token.storage.jwt.secret = "I need to put a really good secret here, coming from an Environment variable"

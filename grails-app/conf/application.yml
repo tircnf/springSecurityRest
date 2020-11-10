@@ -1,4 +1,8 @@
 ---
+
+server:
+  port: 8085
+
 grails:
   profile: rest-api
   codegen:
