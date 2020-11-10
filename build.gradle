@@ -66,13 +66,16 @@ dependencies {
     testCompile "org.grails:grails-web-testing-support"
     testCompile "org.grails:views-json-testing-support"
     testCompile "org.hibernate.validator:hibernate-validator:6.0.20.Final"
+
+    // spring security-rest.
+    compile 'org.grails.plugins:spring-security-rest:3.0.1'
 }
 
 bootRun {
     ignoreExitValue true
     jvmArgs(
-        '-Dspring.output.ansi.enabled=always', 
-        '-noverify', 
+        '-Dspring.output.ansi.enabled=always',
+        '-noverify',
         '-XX:TieredStopAtLevel=1',
         '-Xmx1024m')
     sourceResources sourceSets.main
